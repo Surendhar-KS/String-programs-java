@@ -96,3 +96,35 @@ class Codechef
 	}
 }
 
+
+
+==============================================
+	import java.util.*;
+
+class Example {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+
+        int sign = x < 0 ? -1 : 1;
+
+        x = Math.abs(x);
+
+        int rev = 0;
+
+        while (x > 0) {
+
+            int digit = x % 10;
+
+            rev = rev * 10 + digit;
+
+            x = x / 10;
+        }
+
+        rev = sign * rev;
+
+        System.out.println(rev);
+    }
+}
